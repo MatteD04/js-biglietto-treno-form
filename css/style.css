@@ -1,14 +1,14 @@
-body{
+bod{
     background-color: black;
 }
 
-.ticket{
+.ticke{
     padding-top: 50px;
     font-size: 30px;
     text-align: center;
     color: white;
 }
-.btn-download button{
+.btn-download butto{
     cursor: pointer;
     font-size: 40px;
     color: white;

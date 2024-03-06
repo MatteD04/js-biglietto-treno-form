@@ -1,4 +1,4 @@
-//calcolo prezzo biglietto treno
+//calcolo prezzo biglietto treno attraverso gli input
 
 //chiedi all'utente quanti chilometri vuole fare 
 //e chiedere la sua età

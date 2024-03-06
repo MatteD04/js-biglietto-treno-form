@@ -10,13 +10,24 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="ticket">
-        <h1 id="message"></h1>
-        <h2>Compralo qui</h2>
-        <div class="btn-download">
-            <button><i class="fa-solid fa-download"></i></button>
+    <div class="form-container">
+        <div class="input-container">
+            <label>km da percorrere</label>
+            <input id="user-name" type="number">
         </div>
+
+        <div class="input-container">
+            <label>Età</label>
+            <input id="user-lastname" type="number">
+        </div>
+
+        <button id="generate-button">Genera il biglietto</button>
+        <button id="clear-button">Annulla</button>
     </div>
+    <!--messaggio sul costo del biglietto-->
+    <div class="user-message">
+    </div>
+
 
     <script type="text/javascript" src="js/script.js"></script>
 </body>
