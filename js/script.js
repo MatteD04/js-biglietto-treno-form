@@ -2,36 +2,35 @@
 
 //chiedi all'utente quanti chilometri vuole fare 
 //e chiedere la sua età
-const userKm = parseInt(prompt('quanti chilometri devi percorrere?'));
-console.log(userKm);
+const generateButton = document.querySelector('#generate-button');
+generateButton.addEventListener('click', function () {
 
-const userAge = parseInt(prompt('quanti anni hai?'));
-console.log(userAge);
+    const userKm = document.querySelector('#user-km').value; 
+    const userAge = document.querySelector('#user-age').value;
 
-//calcolare il prezzo del viaggio
-const travelCost = userKm * 0.21;
-console.log(travelCost);
+    const travelCost = userKm * 0.21;
 
 //applicare gli sconti adeguati
-let finalPrice;
-if(userAge < 18){
-    const discount = travelCost * 20 / 100;
-    finalPrice = travelCost - discount;
-    console.log(finalPrice);
-} else if(userAge > 65){
-    const discount = travelCost * 40 / 100;
-    finalPrice = travelCost - discount;
-    console.log(finalPrice);
-} else{
-    finalPrice = travelCost
-}
-console.log(finalPrice)
+    let finalPrice;
+    if(userAge < 18){
+        const discount = travelCost * 20 / 100;
+        finalPrice = travelCost - discount;
+        console.log(finalPrice);
+    } else if(userAge > 65){
+        const discount = travelCost * 40 / 100;
+        finalPrice = travelCost - discount;
+        console.log(finalPrice);
+    } else{
+        finalPrice = travelCost
+    }
 
-//arrotondare il costo a massimo 2 cifre decimali
-const roundedPrice = finalPrice.toFixed(2);
-console.log(roundedPrice);
+    console.log(finalPrice)
 
-//scrivere il prezzo finale
-const userMessage = 'Il costo del tuo biglietto sarà €' + roundedPrice;
+    //arrotondare il prezzo
+    const roundedPrice = finalPrice.toFixed(2);
+    console.log(roundedPrice);
 
-document.getElementById("message").innerHTML = userMessage;
+    //scrivere il prezzo finale
+    const userMessageDiv = document.querySelector('.message');
+    userMessageDiv.innerHTML = 'Il costo del tuo biglietto sarà €' + roundedPrice;
+})
