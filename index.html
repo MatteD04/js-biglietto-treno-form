@@ -10,24 +10,38 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="form-container">
-        <div class="input-container">
-            <label>km da percorrere</label>
-            <input id="user-km" type="number">
-        </div>
+    <header>
+        <h1>VIAGGIA CON TRENITALIA</h1>
+    </header>
 
-        <div class="input-container">
-            <label>Età</label>
-            <input id="user-age" type="number">
-        </div>
+    <div class="section">
+        <div class="form-container">
+            <div class="input">
+                <div class="input-container">
+                    <label>km</label>
+                    <input id="user-km" class="user-input" type="number">
+                </div>
 
-        <button id="generate-button">Genera il biglietto</button>
-        <button id="clear-button">Annulla</button>
+                <div class="input-container">
+                    <label>Età</label>
+                    <input id="user-age" class="user-input" type="number">
+                </div>
+            </div>
+
+            <button id="generate-button">Genera il biglietto</button>
+            <button id="clear-button">Annulla</button>
+        </div>
     </div>
     <!--messaggio sul costo del biglietto-->
-    <div class="message">
+    <div class="section">
+        <div class="form-message">
+            <div class="message">
+            </div>
+            <div>
+                <h3>Continua a viaggiare con noi</h3>
+            </div>
+        </div>
     </div>
-
 
     <script type="text/javascript" src="js/script.js"></script>
 </body>

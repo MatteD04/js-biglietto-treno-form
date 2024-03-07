@@ -33,7 +33,6 @@ generateButton.addEventListener('click', function () {
     //scrivere il prezzo finale
     const userMessageDiv = document.querySelector('.message');
     userMessageDiv.innerHTML = 'Il costo del tuo biglietto sarà €' + roundedPrice;
-    userMessageDiv.classList.add('active');
 })
 
 //aggiungere la funzione di annullamento
@@ -43,6 +42,5 @@ clearButton.addEventListener('click', function() {
     document.querySelector('#user-age').value = '';
 
     const userMessageDiv = document.querySelector('.user-message');
-    userMessageDiv.innerHTML= '';
-    userMessageDiv.classList.remove('active');
+    userMessageDiv.innerHTML= '' ;
 });
