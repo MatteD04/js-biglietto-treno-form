@@ -10,7 +10,7 @@ generateButton.addEventListener('click', function () {
 
     const travelCost = userKm * 0.21;
 
-//applicare gli sconti adeguati
+    //applicare gli sconti adeguati
     let finalPrice;
     if(userAge < 18){
         const discount = travelCost * 20 / 100;
@@ -33,4 +33,16 @@ generateButton.addEventListener('click', function () {
     //scrivere il prezzo finale
     const userMessageDiv = document.querySelector('.message');
     userMessageDiv.innerHTML = 'Il costo del tuo biglietto sarà €' + roundedPrice;
+    userMessageDiv.classList.add('active');
 })
+
+//aggiungere la funzione di annullamento
+const clearButton = document.querySelector('#clear-button');
+clearButton.addEventListener('click', function() {
+    document.querySelector('#user-km').value = '';
+    document.querySelector('#user-age').value = '';
+
+    const userMessageDiv = document.querySelector('.user-message');
+    userMessageDiv.innerHTML= '';
+    userMessageDiv.classList.remove('active');
+});
